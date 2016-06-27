@@ -4,76 +4,112 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/angular-vidbg/dist/vidBg.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
   </head>
   <body ng-app="transaldisFlexBoxApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    <!--[if lte IE 8]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
 
-    <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <a class="navbar-brand" href="#/">transaldisFlexBox</a>
-          </div>
-
-          <div class="collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
+      <div class="navbar" layout="row" layout-padding>
+        <div class="nav-brand" flex="20" flex-offset="10">
+          <a href="#"><img src="images/logo_transaldis.png" alt="LogoTransaldis"/></a>
         </div>
+        <div class="navlink" layout="row" flex="60" layout-align="end center">
+        <li layout-padding>
+          <a href="#">SERVICES<i class="fa fa-caret-down" layout-padding aria-hidden="true"></i>
+          </a>
+          <ul>
+            <li>
+              <a href="#">Nos solutions</a>
+            </li>
+            <li>
+              <a href="#">Demande de devis</a>
+            </li>
+            <li>
+              <a href="#">Suivi de livraison</a>
+            </li>
+          </ul>
+        </li>
+        <li layout-padding>
+          <a href="#">ENTREPRISE<i class="fa fa-caret-down" layout-padding aria-hidden="true"></i>
+          </a>
+          <ul>
+            <li>
+              <a href="#">Qui sommes nous</a>
+            </li>
+            <li>
+              <a href="#">Nouvelles</a>
+            </li>
+            <li>
+              <a href="#">Médias</a>
+            </li>
+            <li>
+              <a href="#">Emplois</a>
+            </li>
+          </ul>
+        </li>
+        <li layout-padding>
+          <a href="#">CONTACT<i class="fa fa-caret-down" layout-padding aria-hidden="true"></i>
+          </a>
+        </li>
       </div>
     </div>
+  </div>
 
-    <div class="container">
+  <div class="container">
     <div ng-view=""></div>
-    </div>
+  </div>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    !function(A, n, g, u, l, a, r) {
+      A.GoogleAnalyticsObject = l,
+      A[l] = A[l] || function() {
+        (A[l].q = A[l].q || []).push(arguments)
+      },
+      A[l].l =+ new Date,
+      a = n.createElement(g),
+      r = n.getElementsByTagName(g)[0],
+      a.src = u,
+      r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
 
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-vidbg/dist/vidBg.js"></script>
+  <script src="bower_components/lodash/lodash.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/home.js"></script>
+  <!-- endbuild -->
 </body>
 </html>
