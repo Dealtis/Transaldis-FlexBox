@@ -13,7 +13,8 @@ angular
     'ngAnimate',
     'ngRoute',
     'ngMaterial',
-    'ngVidBg'
+    'ngVidBg',
+    'uiGmapgoogle-maps'
   ])
   .config(function ($routeProvider) {
     $routeProvider

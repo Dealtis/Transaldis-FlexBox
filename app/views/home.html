@@ -10,23 +10,78 @@
   <vid-bg resources="resources" poster="poster" full-screen="fullScreen" muted="muted" z-index="zIndex" play-info="playInfo" pause-play="pausePlay"></vid-bg>
 </div>
 <div class="content-home-wrapper">
-  <div class="introduction" layout="row"  layout-align="center center" layout-padding>
+  <div class="introduction" layout="row" layout-sm="column" layout-align-sm="center stretch" layout-xs="column" layout-align-xs="center stretch" layout-align="center center" layout-padding>
     <div class="presentation" flex>
       <p>
-        TRANSALDIS, c'est plus de 22 ans à votre service. Une PME créée en 1993 située dans l’est parisien à MITRY MORY, à proximité de ROISSY CDG et accessible par les grands axes routiers. L’Entreprise, par ses différents métiers développés au sein même de
-        son site, est capable de répondre à tous les besoins en transport et logistique de sa Clientèle sur l’ensemble du territoire national. Transporteur et Organisateur de transport, nous offrons un rôle de conseil à la mise en place de prestation dédiée.
+        Transaldis, c'est plus de 22 ans à votre service. Une PME créée en 1993 située dans l’est parisien à Mitry Mory, à proximité de Roissy CDG et accessible par les grands axes routiers. L’entreprise, par ses différents métiers développés au sein même de
+        son site, est capable de répondre à tous les besoins en transport et logistique de sa clientèle sur l’ensemble du territoire national. Transporteur et organisateur de transport, nous offrons un rôle de conseil à la mise en place de prestation dédiée.
       </p>
     </div>
     <div class="citation" flex>
       <blockquote>
         <p>
           <i>
-            Il n'y a pas de limite à ce que nous pouvons faire ensemble, chacun de nous transporte en soi le centre de l'univers.
+            Il n'y a pas de limite à ce que nous pouvons faire ensemble, chacun de nous transporte en soit le centre de l'univers.
           </i>
-          Nancy HUSTON
+          <p>
+            Nancy HUSTON
+          </p>
         </p>
       </blockquote>
     </div>
-
+  </div>
+  <div class="actuinfo" layout="row" layout-sm="column" layout-xs="column" layout-padding layout-align="space-around center" layout-align-sm="center stretch" layout-align-xs="center stretch">
+    <div class="actualite" flex="50" flex-sm="100" flex-xs="100">
+      <md-card ng-repeat="actu in actus | limitTo:2" class="custom" flex>
+        <md-card-title>
+          <md-card-title-media>
+            <div class="md-media-lg card-media">
+              <img ng-src="admin/images/thumb64/{{actu.actu_imgsrc}}" alt=""/>
+            </div>
+          </md-card-title-media>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">{{actu.actu_contenu}}</span>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
+    <div class="informations" flex="50" flex-sm="100" flex-xs="100">
+      <div layout="column" layout-align="space-around center" layout-padding>
+        <div class="contact" flex="50" flex-sm="30">
+          <div layout="row" layout-padding>
+            <div class="icocontact" layout="column">
+              <div>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              </div>
+              <div>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div  layout="column">
+              <div>
+                <span>01.60.21.48.30</span>
+              </div>
+              <div>
+                <span>contact@transaldis.fr</span>
+              </div>
+              <div>
+                <span>Rue Charles de Coulomb</span>
+                <br>
+                <span>77290 Mitry-Mory</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map" flex="50" flex-sm="70">
+          <ui-gmap-google-map center='map.center' zoom='map.zoom' options='map.options'>
+            <ui-gmap-marker coords="map.markerHome.coords" options="map.markerHome.options" idkey="map.markerHome.id"></ui-gmap-marker>
+          </ui-gmap-google-map>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
